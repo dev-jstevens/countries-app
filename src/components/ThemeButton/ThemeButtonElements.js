@@ -2,12 +2,15 @@ import styled from "styled-components";
 import { IoMoonOutline, IoMoonSharp } from 'react-icons/io5';
 
 export const Button = styled.button`
-  height: 25%;
   width: 30%;
-  margin-top: 41.5px;
   margin-right: 1em;
   background: none;
   border: none;
+`;
+
+export const ButtonWrapper = styled.div`
+  width: 10em;
+  margin-top: 10%;
 `;
 
 export const ButtonText = styled.h3`
@@ -16,15 +19,18 @@ export const ButtonText = styled.h3`
   font-family: 'Nunito Sans';
   font-weight: 600;
   margin: 0px;
-  width: 10em;
+  width: 6.5em;
+  display: inline-block;
 `;
 
 export const DarkMoon = styled(IoMoonOutline)`
   font-size: 15px;
   color: #000;
+  display: inline-block;
 `;
 
 export const LightMoon = styled(IoMoonSharp)`
   font-size: 15px;
   color: hsl(0, 0%, 100%);
+  display: inline-block;
 `;

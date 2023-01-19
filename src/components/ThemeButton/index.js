@@ -3,6 +3,7 @@ import { ThemeContext } from '../../ThemeContext';
 import { 
   Button,
   ButtonText,
+  ButtonWrapper,
   DarkMoon,
   LightMoon
 } from './ThemeButtonElements';
@@ -16,8 +17,10 @@ const ThemeButton = () => {
 
   return (
     <Button onClick={handleTheme}>
-      {darkMode ?  <LightMoon /> : <DarkMoon /> }
-      <ButtonText darkMode={darkMode}>Dark Mode</ButtonText>
+      <ButtonWrapper>
+        {darkMode ?  <LightMoon /> : <DarkMoon /> }
+        <ButtonText darkMode={darkMode}>Dark Mode</ButtonText>
+      </ButtonWrapper>
     </Button>
   );
 };

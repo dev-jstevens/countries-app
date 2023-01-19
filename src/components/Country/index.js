@@ -6,10 +6,23 @@ import {
   CountryInfo,
   CountryName,
   Label,
-  CountryData
+  CountryData,
+  InforWrapper
 } from './CountryElements';
 
 const Country = ({country}) => {
+  const countryCapital = function(country) {
+    if (!country.capital) {
+      return "N/A";
+    } else {
+      if (!country.capital[0]) {
+        return "N/A";
+      }
+    }
+
+    return country.capital[0];
+  }
+
   return (
     <CountryContainer>
       <CountryFlag>
@@ -17,12 +30,18 @@ const Country = ({country}) => {
       </CountryFlag>
       <CountryInfo>
         <CountryName>{country.name.common}</CountryName>
-        <Label>Population</Label>
-        <CountryData>{country.population}</CountryData>
-        <Label>Region</Label>
-        <CountryData>{country.region}</CountryData>
-        <Label>Capital</Label>
-        <CountryData>{country.capital}</CountryData>
+        <InforWrapper>
+          <Label>Population</Label>
+          <CountryData>{country.population}</CountryData>
+        </InforWrapper>
+        <InforWrapper>
+          <Label>Region</Label>
+          <CountryData>{country.region}</CountryData>
+        </InforWrapper>
+        <InforWrapper>
+          <Label>Capital</Label>
+          <CountryData>{countryCapital(country)}</CountryData>
+        </InforWrapper>
       </CountryInfo>
     </CountryContainer>
   );

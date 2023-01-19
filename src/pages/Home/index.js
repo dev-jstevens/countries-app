@@ -15,7 +15,7 @@ const HomePage = () => {
   const [countries, setCountries] = useState([]);
 
   const { darkMode } = useContext(ThemeContext);
-  console.log(darkMode);
+  console.log(`darkMode on? ${darkMode}`);
 
   useEffect(() => {
     client.get('/all').then((response) => {
