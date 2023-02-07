@@ -17,12 +17,6 @@ const HomePage = () => {
   const [loading, setLoading] = useState(false);
 
   const { darkMode } = useContext(ThemeContext);
-  console.log(`darkMode on? ${darkMode}`);
-
-  // const getCountries = async () => {
-  //   const {countries} = await client.get('/all');
-  //   setCountries(countries);
-  // }
 
   useEffect(() => {
     setLoading(true);
@@ -31,8 +25,6 @@ const HomePage = () => {
       setLoading(false);
     });
   }, []);
-
-  console.log(countries);
 
   return (
     <>

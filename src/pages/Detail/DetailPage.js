@@ -15,15 +15,12 @@ const DetailPage = () => {
   });
 
   const { darkMode } = useContext(ThemeContext);
-  console.log(`Details page: darkMode on? ${darkMode}`);
 
   useEffect(() => {
     client.get(`/name/${name}`).then((response) => {
       setCountry(response.data);
     });
   }, []);
-
-  console.log(country);
 
   return (
     <>

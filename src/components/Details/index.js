@@ -119,38 +119,6 @@ const Details = ({ country }) => {
     return languagesArr;
   };
 
-  // borderCountries.map(
-  //   (border) => console.log(`Details border ${border.name.common}`)
-  // )
-
-  console.log(borderCountries);
-  // console.log(`Details typeof borderCountries: ${borderCountries[0]}`);
-
-  // const isBorders = function(borders) {
-  //   if(borders) {
-  //     console.log(`Hi, there's borders`);
-  //     borders.map(
-  //       (border) => console.log(`Details border ${border.name.common}`)
-  //     )
-  //     return (
-  //       borders.map(
-  //         (b, i) => {
-  //           <BorderCountry key={i}>
-  //             <BorderCountryButton>
-  //               <BorderCountryLink to={`details/${b.name.common}`}>{b.name.common}</BorderCountryLink>
-  //             </BorderCountryButton>
-  //           </BorderCountry>
-  //         }
-  //       )
-  //     );
-  //   } else {
-  //     console.log(`There's no borders :/`)
-  //     return (
-  //       <Info>Loading...</Info>
-  //     )
-  //   }
-  // }
-
   return (
     <DetailsContainer darkMode={darkMode}>
       <Col1>
