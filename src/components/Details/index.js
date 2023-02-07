@@ -213,7 +213,7 @@ const Details = ({ country }) => {
                   )
                 })
               ) : (
-                <Info>{'N/A'}</Info>
+                <Info darkMode={darkMode}>N/A</Info>
               )
             }
           </BorderCountriesContainer>

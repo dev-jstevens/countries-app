@@ -107,7 +107,7 @@ export const InfoContainerOne = styled.ul`
   list-style: none;
 
   @media screen and (min-width: 480px) {
-    width: 20vw;
+    width: 25vw;
     padding-left: 0px;
     display: inline-block;
   }
@@ -131,7 +131,7 @@ export const CountryTitle = styled.h2`
   font-weight: 800;
 
   @media screen and (min-width: 480px) {
-    width: 20vw;
+    width: 25vw;
   }
 `;
 
