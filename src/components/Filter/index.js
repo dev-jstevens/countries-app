@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { 
   ButtonText,
   DownChevron,
@@ -10,65 +10,79 @@ import {
   FilterMenu,
   TextWrapper
 } from './FilterElements';
+import { ThemeContext } from '../../ThemeContext';
 
 const Filter = (props) => {
   const [openFilterMenu, setOpenFilterMenu] = useState(false);
+  const { darkMode } = useContext(ThemeContext);
 
   return (
     <FilterContainer>
-      <FilterButton onClick={() => setOpenFilterMenu(!openFilterMenu)}>
+      <FilterButton onClick={() => setOpenFilterMenu(!openFilterMenu)} darkMode={darkMode}>
         <TextWrapper>
-          <ButtonText>Filter by Region</ButtonText>
-          <DownChevron />
+          <ButtonText darkMode={darkMode}>Filter by Region</ButtonText>
+          <DownChevron darkMode={darkMode} />
         </TextWrapper>
       </FilterButton>
-      <FilterMenu openFilterMenu={openFilterMenu}>
+      <FilterMenu openFilterMenu={openFilterMenu} darkMode={darkMode}>
         <FilterItem>
           <FilterItemButton 
           onClick={() => props.handler('all')}
-          active={props.activeFilter === 'all' ? 'rgba(0, 0, 0, 0.1)' : 'hsl(0, 0%, 100%);'}
+          active={props.activeFilter === 'all' ? 'rgba(255, 255, 255, 0.1)' : (
+            darkMode ? 'hsl(209, 23%, 22%)' : 'hsl(0, 0%, 100%)'
+          )}
           >
-            <FilterItemText>All</FilterItemText>
+            <FilterItemText darkMode={darkMode}>All</FilterItemText>
           </FilterItemButton>
         </FilterItem>
         <FilterItem>
           <FilterItemButton
           onClick={() => props.handler('africa')}
-          active={props.activeFilter === 'africa' ? 'rgba(0, 0, 0, 0.1)' : 'hsl(0, 0%, 100%);'}
+          active={props.activeFilter === 'africa' ? 'rgba(255, 255, 255, 0.1)' : (
+            darkMode ? 'hsl(209, 23%, 22%)' : 'hsl(0, 0%, 100%)'
+          )}
           >
-            <FilterItemText>Africa</FilterItemText>
+            <FilterItemText darkMode={darkMode}>Africa</FilterItemText>
           </FilterItemButton>
         </FilterItem>
         <FilterItem>
           <FilterItemButton
           onClick={() => props.handler('americas')}
-          active={props.activeFilter === 'americas' ? 'rgba(0, 0, 0, 0.1)' : 'hsl(0, 0%, 100%);'}
+          active={props.activeFilter === 'americas' ? 'rgba(255, 255, 255, 0.1)' : (
+            darkMode ? 'hsl(209, 23%, 22%)' : 'hsl(0, 0%, 100%)'
+          )}
           >
-            <FilterItemText>Americas</FilterItemText>
+            <FilterItemText darkMode={darkMode}>Americas</FilterItemText>
           </FilterItemButton>
         </FilterItem>
         <FilterItem>
           <FilterItemButton
           onClick={() => props.handler('asia')}
-          active={props.activeFilter === 'asia' ? 'rgba(0, 0, 0, 0.1)' : 'hsl(0, 0%, 100%);'}
+          active={props.activeFilter === 'asia' ? 'rgba(255, 255, 255, 0.1)' : (
+            darkMode ? 'hsl(209, 23%, 22%)' : 'hsl(0, 0%, 100%)'
+          )}
           >
-            <FilterItemText>Asia</FilterItemText>
+            <FilterItemText darkMode={darkMode}>Asia</FilterItemText>
           </FilterItemButton>
         </FilterItem>
         <FilterItem>
           <FilterItemButton
           onClick={() => props.handler('europe')}
-          active={props.activeFilter === 'europe' ? 'rgba(0, 0, 0, 0.1)' : 'hsl(0, 0%, 100%);'}
+          active={props.activeFilter === 'europe' ? 'rgba(255, 255, 255, 0.1)' : (
+            darkMode ? 'hsl(209, 23%, 22%)' : 'hsl(0, 0%, 100%)'
+          )}
           >
-            <FilterItemText>Europe</FilterItemText>
+            <FilterItemText darkMode={darkMode}>Europe</FilterItemText>
           </FilterItemButton>
         </FilterItem>
         <FilterItem>
           <FilterItemButton
           onClick={() => props.handler('oceania')}
-          active={props.activeFilter === 'oceania' ? 'rgba(0, 0, 0, 0.1)' : 'hsl(0, 0%, 100%);'}
+          active={props.activeFilter === 'oceania' ? 'rgba(255, 255, 255, 0.1)' : (
+            darkMode ? 'hsl(209, 23%, 22%)' : 'hsl(0, 0%, 100%)'
+          )}
           >
-            <FilterItemText>Oceania</FilterItemText>
+            <FilterItemText darkMode={darkMode}>Oceania</FilterItemText>
           </FilterItemButton>
         </FilterItem>
       </FilterMenu>

@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
-import { Container, CountriesList } from './CountriesContainerElements';
+import React, { useState, useContext } from 'react';
+import { Container, CountriesList, ControlContainer } from './CountriesContainerElements';
 import Country from '../Country';
 import Filter from '../Filter';
 import SearchBar from '../SearchBar';
+import { ThemeContext } from '../../ThemeContext';
 
 const CountriesContainer = ({countries}) => {
   const [inputValue, setInputValue] = useState("");
   const [activeFilter, setActiveFilter] = useState('all');
+  const { darkMode } = useContext(ThemeContext);
 
   const FILTER_MAP = {
     all: (country) => country.region,
@@ -18,11 +20,14 @@ const CountriesContainer = ({countries}) => {
   };
 
   return (
-    <Container>
-      <SearchBar onChange={(e) => {
-          setInputValue(e.target.value); }} />
-      <Filter handler={filter => setActiveFilter(filter)} activeFilter={activeFilter} />
-      <CountriesList>
+    <Container darkMode={darkMode}>
+      <ControlContainer>
+        <SearchBar onChange={(e) => {
+          setInputValue(e.target.value);
+        }} />
+        <Filter handler={filter => setActiveFilter(filter)} activeFilter={activeFilter} />
+      </ControlContainer>
+      <CountriesList darkMode={darkMode}>
         {
           countries?.filter(
             (e) =>

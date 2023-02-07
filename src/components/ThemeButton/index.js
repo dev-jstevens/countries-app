@@ -5,6 +5,7 @@ import {
   ButtonText,
   ButtonWrapper,
   DarkMoon,
+  IconWrapper,
   LightMoon
 } from './ThemeButtonElements';
 

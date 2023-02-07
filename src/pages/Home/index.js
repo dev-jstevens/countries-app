@@ -5,6 +5,7 @@ import './index.css';
 import { ThemeContext } from '../../ThemeContext';
 import Header from '../../components/Header';
 import CountriesContainer from '../../components/CountriesContainer';
+import LoadingScreen from '../../components/LoadingScreen';
 import axios from 'axios';
 
 const HomePage = () => {
@@ -13,13 +14,21 @@ const HomePage = () => {
   });
 
   const [countries, setCountries] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const { darkMode } = useContext(ThemeContext);
   console.log(`darkMode on? ${darkMode}`);
 
+  // const getCountries = async () => {
+  //   const {countries} = await client.get('/all');
+  //   setCountries(countries);
+  // }
+
   useEffect(() => {
+    setLoading(true);
     client.get('/all').then((response) => {
       setCountries(response.data);
+      setLoading(false);
     });
   }, []);
 
@@ -28,7 +37,13 @@ const HomePage = () => {
   return (
     <>
       <Header />
-      <CountriesContainer countries={countries} />
+      {
+        loading ? (
+          <LoadingScreen />
+        ) : (
+          <CountriesContainer countries={countries} />
+        )
+      }
     </>
   );
 };

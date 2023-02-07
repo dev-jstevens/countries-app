@@ -1,6 +1,6 @@
 # Frontend Mentor - REST Countries API with color theme switcher solution
 
-This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca).
 
 ## Table of contents
 
@@ -20,6 +20,8 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 
 ## Overview
 
+A relatively small application that allows users to search through, filter, and view details about countries fetched from the REST Countries API. I worked on it on and off over the course of about a month. The "REST Countries API with color theme switcher" challenge was a great opportunity to showcase my Front end skills using React, Context API, Axios, CSS, HTML, and JavaScript. The app is responsive, but was designed primarily for small mobile screens (width 375px) and desktops (width 1440px). 
+
 ### The challenge
 
 Users should be able to:
@@ -33,15 +35,19 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+Here are some screens shots of my solution:
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+[Desktop Home Page (Dark Theme)](https://drive.google.com/file/d/1nFQBMBgoO8TMGGDVn-MWoIOb2DtarvW1/view?usp=sharing)
+[Desktop Details Page (Dark Theme)](https://drive.google.com/file/d/1hdR3BEveNUuPiIBjWord3qUd6J-PeLOy/view?usp=sharing)
+[Desktop Home Page (Light Theme)](https://drive.google.com/file/d/173zxntpSxmlaEpH-hGAhvQQQVjLUngRd/view?usp=sharing)
+[Desktop Details Page (Light Theme)](https://drive.google.com/file/d/178QpiIEnKAzqOuo-ozz7nQSjsH3pVn67/view?usp=sharing)
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+[Mobile Home Page (Dark Theme)](https://drive.google.com/file/d/1Jljp9GS6KYx3SwbrDGUEREn4D0FirI3v/view?usp=sharing)
+[Mobile Details Page (Dark Theme)](https://drive.google.com/file/d/1OPTD2WldxS__MPpn7G2Jdy7ZOdNL_U5Z/view?usp=sharing)
+[Mobile Home Page (Light Theme)](https://drive.google.com/file/d/1VllN24rF3hs0HwXrc4eDOsTqglsJOCac/view?usp=sharing)
+[Mobile Details Page (Light Theme)](https://drive.google.com/file/d/1yryhPmL-vR_Tm4pAG7apsYp0yswImDFb/view?usp=sharing)
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
 
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
