@@ -18,19 +18,25 @@ const Country = ({country}) => {
   const formatPopulation = function(population) {
     const popStr = population.toString();
     const populationArr = [];
+    let thirdCharCounter = 0;
 
     for (let i = popStr.length - 1; i >= 0; i--) {
-      if (i === popStr.length - 1) {
-        populationArr.push(popStr[i]);
-      } else if ((i !== 0) && (i % 3 === 0)) {
-        populationArr.unshift(popStr[i]);
-        populationArr.unshift(",");
+      if (popStr.length < 4) {
+        return popStr;
       } else {
-        populationArr.unshift(popStr[i]);
+        populationArr.push(popStr[i]);
+        thirdCharCounter++;
+
+        if (thirdCharCounter === 3) {
+          if (i !== 0) {
+            populationArr.push(",");
+          }
+          thirdCharCounter = 0;
+        }
       }
     }
 
-    return populationArr.join('').toString();
+    return populationArr.reverse().join('').toString();
   }
 
   const countryCapital = function(country) {

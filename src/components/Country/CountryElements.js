@@ -74,7 +74,7 @@ export const CountryName = styled.h2`
   height: 1.4em;
 
   @media screen and (min-width: 480px) {
-    width: 8rem;
+    width: 13rem;
     margin-top: 0.9375rem;
     margin-left: 1.875rem;
   }
@@ -94,10 +94,13 @@ export const CountryInfo = styled.div`
 
 export const InfoWrapper = styled.div`
   width: 16em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 
   @media screen and (min-width: 480px) {
     margin-bottom: 0.3rem;
-    width: 11em;
+    width: 13em;
     margin-left: 1.875rem;
   }
 `;
