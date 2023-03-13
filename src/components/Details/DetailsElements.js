@@ -5,7 +5,7 @@ import { BsArrowLeft } from 'react-icons/bs';
 export const DetailsContainer = styled.main`
   background: ${({darkMode}) => (darkMode ? 'hsl(207, 26%, 17%)' : 'hsl(0, 0%, 98%)')};
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 875px) {
     display: flex;
   }
 `;
