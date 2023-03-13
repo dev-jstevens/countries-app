@@ -11,7 +11,7 @@ export const DetailsContainer = styled.main`
 `;
 
 export const Col1 = styled.div`
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 875px) {
     width: 50vw;
     height: 93vh;
     display: inline-block;
@@ -19,7 +19,7 @@ export const Col1 = styled.div`
 `;
 
 export const Col2 = styled.div`
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 875px) {
     width: 50vw;
     height: 93vh;
     display: inline-block;
@@ -28,13 +28,13 @@ export const Col2 = styled.div`
 `;
 
 export const Row1 = styled.div`
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 875px) {
     display: flex;
   }
 `;
 
 export const Row2 = styled.div`
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 875px) {
     margin-bottom: 3.8rem;
   }
 `;
@@ -49,7 +49,7 @@ export const BackButton = styled.button`
   margin-left: 30px;
   margin-bottom: 20px;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 875px) {
     margin-top: 3.8rem;
     margin-left: 3.8rem;
     margin-bottom: 0px;
@@ -73,7 +73,7 @@ export const ButtonLink = styled(Link)`
   font-weight: 300;
   display: inline-block;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 875px) {
     margin-right: 0.5rem;
   }
 `;
@@ -84,7 +84,7 @@ export const FlagWrapper = styled.div`
   width: 85vw;
   height: 25vh;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 875px) {
     width: 38vw;
     height: 40vh;
     margin-top: 3.8rem;
@@ -106,7 +106,7 @@ export const InfoContainerOne = styled.ul`
   height: 25vh;
   list-style: none;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 875px) {
     width: 25vw;
     padding-left: 0px;
     display: inline-block;
@@ -118,7 +118,7 @@ export const InfoSection = styled.li`
   margin: 0px;
   padding: 0px;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 875px) {
     width: 20vw;
     margin-bottom: 0.2rem;
   }
@@ -130,7 +130,7 @@ export const CountryTitle = styled.h2`
   font-family: 'Nunito Sans';
   font-weight: 800;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 875px) {
     width: 25vw;
   }
 `;
@@ -166,7 +166,7 @@ export const InfoContainerTwo = styled.ul`
   height: 10vh;
   list-style: none;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 875px) {
     width: 20vw;
     padding-left: 0px;
     display: inline-block;
@@ -181,7 +181,7 @@ export const BorderCountriesContainer = styled.ul`
   padding-bottom: 10px;
   margin-bottom: 0px;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 875px) {
     width: 45vw;
     padding-left: 0px;
     margin-top: 1.7rem;
@@ -199,7 +199,7 @@ export const BorderLabel = styled.h3`
   margin-right: 10px;
   padding: 0px;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 875px) {
     display: inline-block;
   }
 `;
