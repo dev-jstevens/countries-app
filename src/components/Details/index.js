@@ -28,7 +28,7 @@ import { ThemeContext } from '../../ThemeContext';
 const Details = ({ country }) => {
   const [borderCountries, setBorderCountries] = useState([]);
   const { darkMode } = useContext(ThemeContext);
-  const webAppURL = 'https://rest-countries-app-jstevens-dev.netlify.app/';
+  const webAppURL = 'https://rest-countries-app-jstevens-dev.netlify.app';
 
   const client = axios.create({
     baseURL: 'https://restcountries.com/v3.1'
