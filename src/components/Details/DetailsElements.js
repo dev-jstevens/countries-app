@@ -219,7 +219,7 @@ export const BorderCountryButton = styled.button`
   text-decoration: none;
 `;
 
-export const BorderCountryLink = styled.a`
+export const BorderCountryLink = styled(Link)`
   font-size: 0.8em;
   color: ${({darkMode}) => (darkMode ? 'hsl(0, 0%, 100%)' : 'hsl(200, 15%, 8%)')};
   font-family: 'Nunito Sans';
