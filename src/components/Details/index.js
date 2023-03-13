@@ -208,7 +208,7 @@ const Details = ({ country }) => {
                   return (
                     <BorderCountry key={i} darkMode={darkMode}>
                       <BorderCountryButton darkMode={darkMode}>
-                        <BorderCountryLink to={`../details/${border.name.common}`} darkMode={darkMode}>{border.name.common}</BorderCountryLink>
+                        <BorderCountryLink to={`../details/${border.name.official}`} darkMode={darkMode}>{border.name.common}</BorderCountryLink>
                       </BorderCountryButton>
                     </BorderCountry>
                   )
