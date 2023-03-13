@@ -28,6 +28,7 @@ import { ThemeContext } from '../../ThemeContext';
 const Details = ({ country }) => {
   const [borderCountries, setBorderCountries] = useState([]);
   const { darkMode } = useContext(ThemeContext);
+  const webAppURL = 'https://rest-countries-app-jstevens-dev.netlify.app/';
 
   const client = axios.create({
     baseURL: 'https://restcountries.com/v3.1'
@@ -207,7 +208,7 @@ const Details = ({ country }) => {
                   return (
                     <BorderCountry key={i} darkMode={darkMode}>
                       <BorderCountryButton darkMode={darkMode}>
-                        <BorderCountryLink href={`http://localhost:3000/details/${border.name.common}`} darkMode={darkMode}>{border.name.common}</BorderCountryLink>
+                        <BorderCountryLink href={`${webAppURL}/details/${border.name.common}`} darkMode={darkMode}>{border.name.common}</BorderCountryLink>
                       </BorderCountryButton>
                     </BorderCountry>
                   )
